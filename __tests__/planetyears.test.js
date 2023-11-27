@@ -4,6 +4,7 @@
 // Jupiter: 11.86 earth  = 1 yr
 
 import { Mercury } from './../src/js/planetyears.js'
+import { Venus } from './../src/js/planetyears.js'
 
 
 describe('Mercury', () => {
@@ -14,11 +15,9 @@ describe('Mercury', () => {
 	});
 })
 
-
-// describe('Mercury class', () => {
-//  test('should calculate Mercury age correctly', () => {
-//    const earthAge = 25;
-//    const mercury = new Mercury(earthAge);
-//    expect(mercury.getMercuryAge()).toBeCloseTo(earthAge * 0.24, 10); // Using toBeCloseTo due to potential floating-point precision issues
-//  });
+describe('Venus', () => {
+	test('should return the users input age in equivalent Venus years', () => {
+		expect(venus.getVenusAge()).toBeCloseTo();
+	});
+})
 
