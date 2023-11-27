@@ -17,7 +17,9 @@ describe('Mercury', () => {
 
 describe('Venus', () => {
 	test('should return the users input age in equivalent Venus years', () => {
-		expect(venus.getVenusAge()).toBeCloseTo();
+		const earthAge = 35;
+		const venus = new Venus(earthAge);
+		expect(venus.getVenusAge()).toBeCloseTo(21.7);
 	});
 })
 
