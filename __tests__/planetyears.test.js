@@ -23,6 +23,8 @@ describe('Venus', () => {
 
 describe('Mars', () => {
 	test('Shold return the users input age in equivalent Mars years', () => {
-		expect(mars.getMarsAge()).toBeCloseTo();
+		const earthAge = 35;
+		const mars = new Mars(earthAge);
+		expect(mars.getMarsAge()).toBeCloseTo(241.85);
 	});
 })
