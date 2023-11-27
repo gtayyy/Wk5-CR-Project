@@ -31,6 +31,8 @@ describe('Mars', () => {
 
 describe('Jupiter', () => {
 	test('should return the users input age in equivalent Jupiter years', () => {
+		const earthAge = 35;
+		const jupiter = new Jupiter(earthAge);
 		expect(jupiter.getJupiterAge()).toBeCloseTo(415.1);
 	});
 })
