@@ -24,7 +24,7 @@ export class Venus {
 
 export class Mars {
 	constructor(earthAge) {
-		this.marsYears = earthAge * 6.91;
+		this.marsYears = earthAge * 1.88;
 	}
 	getMarsAge() {
 		return this.marsYears;
@@ -59,10 +59,10 @@ export class YearsSince {
 
 // describe('YearsSince', () => {
 // 	test('should return the number of years that have passed since a given age', () => {
-//	const previousAge = 21;
-//	const currentAge = 35;
+// 	const previousAge = 21;
+// 	const currentAge = 35;
 // 	const yrsDelta = currentAge - previousAge;
-//	
+	
 // 		expect(yrsSince.getYearsSinceNum()).toBeCloseTo();
 // 	});
 // })
