@@ -1,8 +1,3 @@
-// Mercury: .24 earth = 1 yr
-// Venus: .62 earth = 1 yr
-// Mars: 1.88 earth = 1 yr
-// Jupiter: 11.86 earth  = 1 yr
-
 import { Mercury, Venus, Mars, Jupiter } from './../src/js/planetyears.js'
 
 describe('Mercury', () => {
@@ -34,5 +29,11 @@ describe('Jupiter', () => {
 		const earthAge = 35;
 		const jupiter = new Jupiter(earthAge);
 		expect(jupiter.getJupiterAge()).toBeCloseTo(415.1);
+	});
+})
+
+describe('YearsSince', () => {
+	test('should return the number of years that have passed since a given age', () => {
+		expect(yrsSince.getYearsSinceNum()).toBeCloseTo();
 	});
 })
