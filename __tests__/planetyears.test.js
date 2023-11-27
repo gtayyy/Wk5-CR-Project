@@ -1,4 +1,4 @@
-import { Mercury, Venus, Mars, Jupiter } from './../src/js/planetyears.js'
+import { Mercury, Venus, Mars, Jupiter, YearsSince } from './../src/js/planetyears.js'
 
 describe('Mercury', () => {
 	test('should return the users input age in equivalent Mercury years', () => {
@@ -20,7 +20,7 @@ describe('Mars', () => {
 	test('should return the users input age in equivalent Mars years', () => {
 		const earthAge = 35;
 		const mars = new Mars(earthAge);
-		expect(mars.getMarsAge()).toBeCloseTo(241.85);
+		expect(mars.getMarsAge()).toBeCloseTo(65.8);
 	});
 })
 
@@ -33,7 +33,11 @@ describe('Jupiter', () => {
 })
 
 describe('YearsSince', () => {
-	test('should return the number of years that have passed since a given age', () => {
-		expect(yrsSince.getYearsSinceNum()).toBeCloseTo();
-	});
-})
+  test('should return the number of years that have passed since a given age', () => {
+    const previousAge = 21;
+    const currentAge = 35;
+    const yrsDelta = currentAge - previousAge;
+    const yrsSince = new YearsSince(yrsDelta);
+    expect(yrsSince.getDeltaAge()).toBe(14);
+  });
+});
