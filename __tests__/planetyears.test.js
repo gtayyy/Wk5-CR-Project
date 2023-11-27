@@ -3,9 +3,7 @@
 // Mars: 1.88 earth = 1 yr
 // Jupiter: 11.86 earth  = 1 yr
 
-import { Mercury } from './../src/js/planetyears.js'
-import { Venus } from './../src/js/planetyears.js'
-
+import { Mercury, Venus, Mars } from './../src/js/planetyears.js'
 
 describe('Mercury', () => {
 	test('should return the users input age in equivalent Mercury years', () => {
@@ -23,3 +21,8 @@ describe('Venus', () => {
 	});
 })
 
+describe('Mars', () => {
+	test('Shold return the users input age in equivalent Mars years', () => {
+		expect(mars.getMarsAge()).toBeCloseTo();
+	});
+})
