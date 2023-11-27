@@ -1,4 +1,8 @@
-//business logic
+// Business logic
+// Mercury: .24 earth = 1 yr
+// Venus: .62 earth = 1 yr
+// Mars: 1.88 earth = 1 yr
+// Jupiter: 11.86 earth  = 1 yr
 
 export class Mercury {
   constructor(earthAge) {
@@ -35,3 +39,30 @@ export class Jupiter {
 		return this.jupiterYears;
 	}
 }
+
+// describe('Jupiter', () => {
+// 	test('should return the users input age in equivalent Jupiter years', () => {
+// 		const earthAge = 35;
+// 		const jupiter = new Jupiter(earthAge);
+// 		expect(jupiter.getJupiterAge()).toBeCloseTo(415.1);
+// 	});
+// })
+
+export class YearsSince {
+	constructor(yrsDelta) {
+		this.yrsSince = yrsDelta;  
+	}
+	getDeltaAge() {
+		return this.yrsSince;
+	}
+}
+
+// describe('YearsSince', () => {
+// 	test('should return the number of years that have passed since a given age', () => {
+//	const previousAge = 21;
+//	const currentAge = 35;
+// 	const yrsDelta = currentAge - previousAge;
+//	
+// 		expect(yrsSince.getYearsSinceNum()).toBeCloseTo();
+// 	});
+// })
