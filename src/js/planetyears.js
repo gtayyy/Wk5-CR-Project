@@ -26,3 +26,12 @@ export class Mars {
 		return this.marsYears;
 	}
 }
+
+export class Jupiter {
+	constructor(earthAge) {
+		this.jupiterYears = earthAge * 11.86;
+	}
+	getJupiterAge() {
+		return this.jupiterYears;
+	}
+}
