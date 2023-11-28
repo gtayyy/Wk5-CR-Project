@@ -116,15 +116,29 @@ export class YearsUntil {
 };
 
 export class YearsUntilMerc {
-	constructor(yrsDelta) {
-		this.yrsUntil = yrsDelta;
-	}
-	getDeltaAge() {
-		return this.yrsUntil;
-	}
-	getDeltaUntilMerc() {
-		const mercConversion = 0.24;
-		const yrsUntilMerc = this.yrsUntil / mercConversion;
-		return parseFloat(yrsUntilMerc.toFixed(2)); 
-	}
+  constructor(yrsDelta) {
+    this.yrsUntil = yrsDelta;
+  }
+  getDeltaAge() {
+    return this.yrsUntil;
+  }
+  getDeltaUntilMerc() {
+    const mercConversion = 0.24;
+    const yrsUntilMerc = this.yrsUntil / mercConversion;
+    return parseFloat(yrsUntilMerc.toFixed(2));
+  }
+};
+
+export class YearsUntilVenus {
+  constructor(yrsDelta) {
+    this.yrsUntil = yrsDelta;
+  }
+  getDeltaAge() {
+    return this.yrsUntil;
+  }
+  getDeltaUntilVenus() {
+    const venusConversion = 0.62;
+    const yrsUntilVenus = this.yrsUntil / venusConversion;
+    return parseFloat(yrsUntilVenus.toFixed(2));
+  }
 };
