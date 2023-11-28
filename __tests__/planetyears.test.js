@@ -122,12 +122,12 @@ describe('YearsUntilMerc', () => {
 
 describe('YearsUntilVenus', () => {
   test('should return the number of Venus years from the users current age until a future given age', () => {
-    // const currentAge = 35;
-    // const futureAge = 50;
-    // const yrsDelta = futureAge - currentAge;
-    // const yrsUntilVenus = new YearsUntilVenus(yrsDelta);
-    // const venusConversion = 0.62;
-    // const expectedVenusYears = yrsUntilVenus.getDeltaAge() / venusConversion;
+    const currentAge = 35;
+    const futureAge = 50;
+    const yrsDelta = futureAge - currentAge;
+    const yrsUntilVenus = new YearsUntilVenus(yrsDelta);
+    const venusConversion = 0.62;
+    const expectedVenusYears = yrsUntilVenus.getDeltaAge() / venusConversion;
     expect(yrsUntilVenus.getDeltaUntilVenus()).toBeCloseTo(expectedVenusYears);
   });
 });
