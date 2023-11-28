@@ -99,8 +99,18 @@ export class YearsSinceJupiter {
 		return this.yrsSinceEarth;
 	}
 	getDeltaAgeJupiter() {
-    const jupiterConversion = 1.88;
+    const jupiterConversion = 11.86;
     const jupiterYears = this.yrsSinceEarth / jupiterConversion;
     return parseFloat(jupiterYears.toFixed(2));
   }
+};
+
+// Determining years until given age (current age to future)
+export class YearsUntil {
+	constructor(yrsDelta) {
+		this.yrsUntil = yrsDelta;
+	}
+	getDeltaAge() {
+		return this.yrsUntil;
+	}
 };
