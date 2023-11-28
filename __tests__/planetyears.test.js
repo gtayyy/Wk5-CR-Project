@@ -81,3 +81,15 @@ describe('YearsSinceMars', () => {
 		expect(yrsSinceMars.getDeltaAgeMars()).toBeCloseTo(expectedMarsYears);
 	});
 });
+
+describe('YearsSinceJupiter', () => {
+	test('should return the number of years that have passed since a given age in Jupiter years', () => {
+		// const previousAge = 21;
+		// const currentAge = 35;
+		// const yrsDelta = currentAge - previousAge;
+		// const jupiterConversion = 11.86;
+		// const yrsSinceJupiter = new YearsSinceJupiter(yrsDelta);
+		// const expectedJupiterYears = yrsSinceJupiter.getDeltaAge() / jupiterConversion;
+		expect(yrsSinceJupiter.getDeltaAgeJupiter()).toBeCloseTo(expectedJupiterYears);
+	});
+});
