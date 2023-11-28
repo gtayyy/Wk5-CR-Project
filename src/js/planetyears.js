@@ -4,6 +4,7 @@
 // Mars: 1.88 earth = 1 yr
 // Jupiter: 11.86 earth  = 1 yr
 
+// Earth years converted to other planetary years
 export class Mercury {
   constructor(earthAge) {
     this.mercuryYears = earthAge / 0.24;
@@ -40,6 +41,7 @@ export class Jupiter {
 	}
 };
 
+// Determining years passed (past date to current age)
 export class YearsSince {
 	constructor(yrsDelta) {
 		this.yrsSince = yrsDelta;  
@@ -61,4 +63,17 @@ export class YearsSinceMerc {
     return this.yrsSinceEarth * mercConversion;
   }
 }; 
+
+export class YearsSinceVenus {
+	constructor(yrsDelta) {
+		this.yrsSinceEarth = yrsDelta;
+	}
+	getDeltaAge() {
+		return this.yrsSinceEarth;
+	}
+	getDeltaAgeVenus() {
+		const venusConversion = 0.62;
+		return this.yrsSinceEarth * venusConversion;
+	}
+};
 
