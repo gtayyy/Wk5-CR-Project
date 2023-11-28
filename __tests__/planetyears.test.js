@@ -1,4 +1,4 @@
-import { Mercury, Venus, Mars, Jupiter, YearsSince } from './../src/js/planetyears.js'
+import { Mercury, Venus, Mars, Jupiter, YearsSince, YearsSinceMerc } from './../src/js/planetyears.js'
 
 describe('Mercury', () => {
 	test('should return the users input age in equivalent Mercury years', () => {
@@ -42,42 +42,14 @@ describe('YearsSince', () => {
   });
 });
 
-
 describe('YearsSinceMerc', () => {
-	test('should return the number of year that have passed since a given age in Mercury years', () => {
-		const previousAge = ();
-		const currentAge = ();
-		const yrsDelta = currentAge - previousAge;
-		const yrsSinceMerc = new YearsSinceMerc(yrsDelta);
-		const mercConversion = 0.24;
-		const mercYears = yrsSinceMerc.getDeltaAge() / mercConversion;
-		const yrsSinceMercury = new YearsSinceMerc(yrsSinceMerc.getDeltaAge());
-		expect(yrsSinceMercury.getMercuryAge()).toBe(mercYears);
-	});
+  test('should return the number of years that have passed since a given age in Mercury years', () => {
+    const previousAge = 25;
+    const currentAge = 35;
+    const yrsDelta = currentAge - previousAge;
+    const mercConversion = 0.24;
+    const yrsSinceMerc = new YearsSinceMerc(yrsDelta);
+    const expectedMercYears = yrsSinceMerc.getDeltaAge() * mercConversion;
+    expect(yrsSinceMerc.getDeltaAgeMerc()).toBe(expectedMercYears);
+  });
 });
-
-// describe('YearsSinceMerc', () => {
-//   test('should return the number of years that have passed since a given age in Mercury years', () => {
-//     const previousAge = 21;
-//     const currentAge = 35;
-//     const yrsDelta = currentAge - previousAge;
-//     const yrsSince = new YearsSinceMerc(yrsDelta);
-//     const mercuryConversion = 0.24;
-//     const mercuryYears = yrsSince.getDeltaAge() / mercuryConversion;
-//     const yrsSinceMercury = new YearsSinceMerc(yrsSince.getDeltaAge());
-//     expect(yrsSinceMercury.getMercuryAge()).toBe(mercuryYears);
-//   });
-// });
-
-// describe('YearsSinceVinus', () => {
-//   test('should return the number of years that have passed since a given age in Venus years', () => {
-//     const previousAge = 21;
-//     const currentAge = 35;
-//     const yrsDelta = currentAge - previousAge;
-//     const yrsSince = new YearsSinceVinus(yrsDelta);
-//     const venusConversion = 0.62;
-//     const venusYears = yrsSince.getDeltaAge() / venusConversion;
-//     const yrsSinceVenus = new YearsSinceVinus(yrsSince.getDeltaAge());
-//     expect(yrsSinceVenus.getVinusAge()).toBe(venusYears);
-//   });
-// });
