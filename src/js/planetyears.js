@@ -91,3 +91,16 @@ export class YearsSinceMars {
   }
 };
 
+export class YearsSinceJupiter {
+	constructor(yrsDelta) {
+		this.yrsSinceEarth = yrsDelta;
+	}
+	getDeltaAge() {
+		return this.yrsSinceEarth;
+	}
+	getDeltaAgeJupiter() {
+    const jupiterConversion = 1.88;
+    const jupiterYears = this.yrsSinceEarth / jupiterConversion;
+    return parseFloat(jupiterYears.toFixed(2));
+  }
+};
