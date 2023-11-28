@@ -114,3 +114,17 @@ export class YearsUntil {
 		return this.yrsUntil;
 	}
 };
+
+export class YearsUntilMerc {
+	constructor(yrsDelta) {
+		this.yrsUntil = yrsDelta;
+	}
+	getDeltaAge() {
+		return this.yrsUntil;
+	}
+	getDeltaUntilMerc() {
+		const mercConversion = 0.24;
+		const yrsUntilMerc = this.yrsUntil / mercConversion;
+		return parseFloat(yrsUntilMerc.toFixed(2)); 
+	}
+};
