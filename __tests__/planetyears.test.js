@@ -1,4 +1,4 @@
-import { Mercury, Venus, Mars, Jupiter, YearsSince, YearsSinceMerc, YearsSinceVenus } from './../src/js/planetyears.js'
+import { Mercury, Venus, Mars, Jupiter, YearsSince, YearsSinceMerc, YearsSinceVenus, YearsSinceMars } from './../src/js/planetyears.js'
 
 describe('Mercury', () => {
 	test('should return the users input age in equivalent Mercury years', () => {
@@ -34,10 +34,10 @@ describe('Jupiter', () => {
 
 describe('YearsSince', () => {
   test('should return the number of years that have passed since a given age in earth years', () => {
-    const previousAge = 21;
-    const currentAge = 35;
-    const yrsDelta = currentAge - previousAge;
-    const yrsSince = new YearsSince(yrsDelta);
+    // const previousAge = 21;
+    // const currentAge = 35;
+    // const yrsDelta = currentAge - previousAge;
+    // const yrsSince = new YearsSince(yrsDelta);
     expect(yrsSince.getDeltaAge()).toBe(14);
   });
 });
@@ -49,7 +49,7 @@ describe('YearsSinceMerc', () => {
     const yrsDelta = currentAge - previousAge;
     const mercConversion = 0.24;
     const yrsSinceMerc = new YearsSinceMerc(yrsDelta);
-    const expectedMercYears = yrsSinceMerc.getDeltaAge() * mercConversion;
+    const expectedMercYears = yrsSinceMerc.getDeltaAge() / mercConversion;
     expect(yrsSinceMerc.getDeltaAgeMerc()).toBe(expectedMercYears);
   });
 });
@@ -61,7 +61,19 @@ describe('YearsSinceVenus', () => {
 		const yrsDelta = currentAge - previousAge;
 		const venusConversion = 0.62;
 		const yrsSinceVenus = new YearsSinceVenus(yrsDelta);
-		const expectedVenusYears = yrsSinceVenus.getDeltaAge() * venusConversion;
+		const expectedVenusYears = yrsSinceVenus.getDeltaAge() / venusConversion;
 		expect(yrsSinceVenus.getDeltaAgeVenus()).toBe(expectedVenusYears);
 	});
+});
+
+describe('YearsSinceMars', () => {
+	test('should return the number of years that have passed since a given age in Mars years', () => {
+		const previousAge = 21;
+		const currentAge = 35;
+		const yrsDelta = currentAge - previousAge;
+		const marsConversion = 1.88;
+		const yrsSinceMars = new YearsSinceMars(yrsDelta);
+		const expectedMarsYears = yrsSinceMars.getDeltaAge() / marsConversion;
+		expect(yrsSinceMars.getDeltaAgeMars()).toBe(expectedMarsYears);
+	})
 });
