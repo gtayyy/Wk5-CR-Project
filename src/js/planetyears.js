@@ -85,8 +85,9 @@ export class YearsSinceMars {
 		return this.yrsSinceEarth;
 	}
 	getDeltaAgeMars() {
-		const marsConversion = 1.88;
-		return this.yearsSinceEarth / marsConversion;
-	}
-}
+    const marsConversion = 1.88;
+    const marsYears = this.yrsSinceEarth / marsConversion;
+    return parseFloat(marsYears.toFixed(2));
+  }
+};
 
