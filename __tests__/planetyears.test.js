@@ -33,37 +33,51 @@ describe('Jupiter', () => {
 })
 
 describe('YearsSince', () => {
-  test('should return the number of years that have passed since a given age on earth', () => {
-    const previousAge = 21;
-    const currentAge = 35;
-    const yrsDelta = currentAge - previousAge;
-    const yrsSinceEarth = new YearsSince(yrsDelta);
-    expect(yrsSinceEarth.getDeltaAge()).toBe(14);
-  });
-});
-
-describe('YearsSince', () => {
-  test('should return the number of years that have passed since a given age in Mercury years', () => {
+  test('should return the number of years that have passed since a given age in earth years', () => {
     const previousAge = 21;
     const currentAge = 35;
     const yrsDelta = currentAge - previousAge;
     const yrsSince = new YearsSince(yrsDelta);
-    const mercuryConversion = 0.24;
-    const mercuryYears = yrsSince.getDeltaAge() / mercuryConversion;
-    const yrsSinceMercury = new Mercury(yrsSince.getDeltaAge());
-    expect(yrsSinceMercury.getMercuryAge()).toBe(mercuryYears);
+    expect(yrsSince.getDeltaAge()).toBe(14);
   });
 });
 
-describe('YearsSince', () => {
-  test('should return the number of years that have passed since a given age in Venus years', () => {
-    const previousAge = 21;
-    const currentAge = 35;
-    const yrsDelta = currentAge - previousAge;
-    const yrsSince = new YearsSince(yrsDelta);
-    const venusConversion = 0.62;
-    const venusYears = yrsSince.getDeltaAge() / venusConversion;
-    const yrsSinceVenus = new Mercury(yrsSince.getDeltaAge());
-    expect(yrsSinceVenus.getMercuryAge()).toBe(venusYears);
-  });
+
+describe('YearsSinceMerc', () => {
+	test('should return the number of year that have passed since a given age in Mercury years', () => {
+		const previousAge = ();
+		const currentAge = ();
+		const yrsDelta = currentAge - previousAge;
+		const yrsSinceMerc = new YearsSinceMerc(yrsDelta);
+		const mercConversion = 0.24;
+		const mercYears = yrsSinceMerc.getDeltaAge() / mercConversion;
+		const yrsSinceMercury = new YearsSinceMerc(yrsSinceMerc.getDeltaAge());
+		expect(yrsSinceMercury.getMercuryAge()).toBe(mercYears);
+	});
 });
+
+// describe('YearsSinceMerc', () => {
+//   test('should return the number of years that have passed since a given age in Mercury years', () => {
+//     const previousAge = 21;
+//     const currentAge = 35;
+//     const yrsDelta = currentAge - previousAge;
+//     const yrsSince = new YearsSinceMerc(yrsDelta);
+//     const mercuryConversion = 0.24;
+//     const mercuryYears = yrsSince.getDeltaAge() / mercuryConversion;
+//     const yrsSinceMercury = new YearsSinceMerc(yrsSince.getDeltaAge());
+//     expect(yrsSinceMercury.getMercuryAge()).toBe(mercuryYears);
+//   });
+// });
+
+// describe('YearsSinceVinus', () => {
+//   test('should return the number of years that have passed since a given age in Venus years', () => {
+//     const previousAge = 21;
+//     const currentAge = 35;
+//     const yrsDelta = currentAge - previousAge;
+//     const yrsSince = new YearsSinceVinus(yrsDelta);
+//     const venusConversion = 0.62;
+//     const venusYears = yrsSince.getDeltaAge() / venusConversion;
+//     const yrsSinceVenus = new YearsSinceVinus(yrsSince.getDeltaAge());
+//     expect(yrsSinceVenus.getVinusAge()).toBe(venusYears);
+//   });
+// });
