@@ -109,13 +109,13 @@ describe('YearsUntil', () => {
 });
 
 describe('YearsUntilMerc', () => {
-	test('should return the number of Murcury years from the users current age until a future given age', () => {
-		const currentAge = 35;
-		const futureAge = 50;
-		const yrsDelta = futureAge - currentAge;
-		const yrsUntilMerc = new YearsUntilMerc(yrsDelta);
-		const mercConversion = 0.24;
-		const expectedMercYears = yrsUntilMerc.getDeltaAge() / mercConversion;
-		expect(yrsUntilMerc.getDeltaAgeMerc()).toBeCloseTo(expectedMercYears);
-	});
+  test('should return the number of Mercury years from the users current age until a future given age', () => {
+    const currentAge = 35;
+    const futureAge = 50;
+    const yrsDelta = futureAge - currentAge;
+    const yrsUntilMerc = new YearsUntilMerc(yrsDelta);
+    const mercConversion = 0.24;
+    const expectedMercYears = yrsUntilMerc.getDeltaAge() / mercConversion;
+    expect(yrsUntilMerc.getDeltaUntilMerc()).toBeCloseTo(expectedMercYears);
+  });
 });
