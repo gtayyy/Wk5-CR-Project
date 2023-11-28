@@ -1,4 +1,7 @@
-import { Mercury, Venus, Mars, Jupiter, YearsSince, YearsSinceMerc, YearsSinceVenus, YearsSinceMars, YearsSinceJupiter, YearsUntil } from './../src/js/planetyears.js'
+import {
+	Mercury, Venus, Mars, Jupiter, YearsSince, YearsSinceMerc, YearsSinceVenus, YearsSinceMars,
+	YearsSinceJupiter, YearsUntil, YearsUntilMerc, YearsUntilVenus, YearsUntilMars, YearsUntilJupiter
+} from './../src/js/planetyears.js'
 
 // Tests for earth years converted to other planetary years
 
@@ -8,7 +11,7 @@ describe('Mercury', () => {
 		const mercury = new Mercury(earthAge);
 		expect(mercury.getMercuryAge()).toBeCloseTo(145.83);
 	});
-})
+});
 
 describe('Venus', () => {
 	test('should return the users input age in equivalent Venus years', () => {
@@ -16,7 +19,7 @@ describe('Venus', () => {
 		const venus = new Venus(earthAge);
 		expect(venus.getVenusAge()).toBeCloseTo(56.45);
 	});
-})
+});
 
 describe('Mars', () => {
 	test('should return the users input age in equivalent Mars years', () => {
@@ -24,7 +27,7 @@ describe('Mars', () => {
 		const mars = new Mars(earthAge);
 		expect(mars.getMarsAge()).toBeCloseTo(18.62);
 	});
-})
+});
 
 describe('Jupiter', () => {
 	test('should return the users input age in equivalent Jupiter years', () => {
@@ -32,7 +35,7 @@ describe('Jupiter', () => {
 		const jupiter = new Jupiter(earthAge);
 		expect(jupiter.getJupiterAge()).toBeCloseTo(2.95);
 	});
-})
+});
 
 // Tests for determining years passed (past date to current age)
 
@@ -102,5 +105,17 @@ describe('YearsUntil', () => {
 		const yrsDelta = futureAge - currentAge;
 		const yrsUntil = new YearsUntil(yrsDelta);
 		expect(yrsUntil.getDeltaAge()).toBe(15);
+	});
+});
+
+describe('YearsUntilMerc', () => {
+	test('should return the number of Murcury years from the users current age until a future given age', () => {
+		const currentAge = 35;
+		const futureAge = 50;
+		const yrsDelta = futureAge - currentAge;
+		const yrsUntilMerc = new YearsUntilMerc(yrsDelta);
+		const mercConversion = 0.24;
+		const expectedMercYears = yrsUntilMerc.getDeltaAge() / mercConversion;
+		expect(yrsUntilMerc.getDeltaAgeMerc()).toBeCloseTo(expectedMercYears);
 	});
 });
