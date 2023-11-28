@@ -97,10 +97,10 @@ describe('YearsSinceJupiter', () => {
 // Tests for determining years until given age (current age to future)
 describe('YearsUntil', () => {
 	test('should return the number of earth years from the users current age until a future given age', () => {
-		const currentAge = ();
-		const futureAge = ();
+		const currentAge = 35;
+		const futureAge = 50;
 		const yrsDelta = futureAge - currentAge;
 		const yrsUntil = new YearsUntil(yrsDelta);
-		expect(yrsUntil.getDeltaAge()).toBe();
+		expect(yrsUntil.getDeltaAge()).toBe(15);
 	});
 });
