@@ -41,16 +41,24 @@ export class Jupiter {
 };
 
 export class YearsSince {
-  constructor(yrsDelta) {
-    this.yrsSince = yrsDelta;
-  }
-  getDeltaAge() {
-    return this.yrsSince;
-  }
-  getDeltaAgeInMercury() {
-    return this.yrsSince / 0.24;
+	constructor(yrsDelta) {
+		this.yrsSince = yrsDelta;  
 	}
-	getDeltaAgeInVenus() {
-		return this.yrsSince / 0.62;
+	getDeltaAge() {
+		return this.yrsSince;
 	}
 };
+
+export class YearsSinceMerc {
+  constructor(yrsDelta) {
+    this.yrsSinceEarth = yrsDelta;
+  }
+  getDeltaAge() {
+    return this.yrsSinceEarth;
+  }
+  getDeltaAgeMerc() {
+    const mercConversion = 0.24;
+    return this.yrsSinceEarth * mercConversion;
+  }
+}; 
+
