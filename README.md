@@ -1,36 +1,33 @@
-# (Application Name)
+# Planetary Years Converter
 
-#### (Brief Description of Application)
+#### This app will intake a users age, as well as two different age spans, and return the equivalent earth years in planetary year equivalents. 
 
 #### By Grant Abel
 
 ## Technologies Used
 
 * JavaScript
-* CSS
-* Bootstrap
 * Jest
 * Babel
 * JSON
 * webpack
-* ESLint
-
-## Description
 
 ## Setup/Installation Requirements
 
 * _Clone this repository to your desktop.
 * _Navigate to the top level directory of the project.
-* _Install all packages with $ npm install.
-* _Build the project using webpack with $ npm run build
+* _Install all packages by running $ npm install.
+* _Build the project by running $ npm run build
 * _Start a development server with $ npm run start
-* _Lint JS files in the src folder with $ npm run lint
 * _Run tests with Jest using $ npm run test
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _No known bugs_
+
+## Last Revised 
+
+* _November 28, 2023_
 
 ## License
 
