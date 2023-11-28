@@ -143,3 +143,15 @@ describe('YearsUntilMars', () => {
     expect(yrsUntilMars.getDeltaUntilMars()).toBeCloseTo(expectedMarsYears);
   });
 });
+
+describe('YearsUntilJupiter', () => {
+  test('should return the number of Jupiter years from the users current age until a future given age', () => {
+    // const currentAge = 35;
+    // const futureAge = 50;
+    // const yrsDelta = futureAge - currentAge;
+    // const yrsUntilJupiter = new YearsUntilupiter(yrsDelta);
+    // const jupiterConversion = 11.86;
+    // const expectedJupiterYears = yrsUntilJupiter.getDeltaAge() / jupiterConversion;
+    expect(yrsUntilJupiter.getDeltaUntilJupiter()).toBeCloseTo(expectedJupiterYears);
+  });
+});
