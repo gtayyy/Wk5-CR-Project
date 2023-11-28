@@ -142,3 +142,17 @@ export class YearsUntilVenus {
     return parseFloat(yrsUntilVenus.toFixed(2));
   }
 };
+
+export class YearsUntilMars {
+  constructor(yrsDelta) {
+    this.yrsUntil = yrsDelta;
+  }
+  getDeltaAge() {
+    return this.yrsUntil;
+  }
+  getDeltaUntilMars() {
+    const marsConversion = 1.88;
+    const yrsUntilMars = this.yrsUntil / marsConversion;
+    return parseFloat(yrsUntilMars.toFixed(2));
+  }
+};
