@@ -1,5 +1,7 @@
 import { Mercury, Venus, Mars, Jupiter, YearsSince, YearsSinceMerc, YearsSinceVenus, YearsSinceMars } from './../src/js/planetyears.js'
 
+// Tests for earth years converted to other planetary years
+
 describe('Mercury', () => {
 	test('should return the users input age in equivalent Mercury years', () => {
 		const earthAge = 35;
@@ -32,12 +34,14 @@ describe('Jupiter', () => {
 	});
 })
 
+// Tests for determining years passed (past date to current age)
+
 describe('YearsSince', () => {
   test('should return the number of years that have passed since a given age in earth years', () => {
-    // const previousAge = 21;
-    // const currentAge = 35;
-    // const yrsDelta = currentAge - previousAge;
-    // const yrsSince = new YearsSince(yrsDelta);
+    const previousAge = 21;
+    const currentAge = 35;
+    const yrsDelta = currentAge - previousAge;
+    const yrsSince = new YearsSince(yrsDelta);
     expect(yrsSince.getDeltaAge()).toBe(14);
   });
 });
@@ -50,7 +54,7 @@ describe('YearsSinceMerc', () => {
     const mercConversion = 0.24;
     const yrsSinceMerc = new YearsSinceMerc(yrsDelta);
     const expectedMercYears = yrsSinceMerc.getDeltaAge() / mercConversion;
-    expect(yrsSinceMerc.getDeltaAgeMerc()).toBe(expectedMercYears);
+    expect(yrsSinceMerc.getDeltaAgeMerc()).toBeCloseTo(expectedMercYears);
   });
 });
 
@@ -62,7 +66,7 @@ describe('YearsSinceVenus', () => {
 		const venusConversion = 0.62;
 		const yrsSinceVenus = new YearsSinceVenus(yrsDelta);
 		const expectedVenusYears = yrsSinceVenus.getDeltaAge() / venusConversion;
-		expect(yrsSinceVenus.getDeltaAgeVenus()).toBe(expectedVenusYears);
+		expect(yrsSinceVenus.getDeltaAgeVenus()).toBeCloseTo(expectedVenusYears);
 	});
 });
 
@@ -74,6 +78,6 @@ describe('YearsSinceMars', () => {
 		const marsConversion = 1.88;
 		const yrsSinceMars = new YearsSinceMars(yrsDelta);
 		const expectedMarsYears = yrsSinceMars.getDeltaAge() / marsConversion;
-		expect(yrsSinceMars.getDeltaAgeMars()).toBe(expectedMarsYears);
-	})
+		expect(yrsSinceMars.getDeltaAgeMars()).toBeCloseTo(expectedMarsYears);
+	});
 });
