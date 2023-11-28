@@ -56,12 +56,12 @@ describe('YearsSinceMerc', () => {
 
 describe('YearsSinceVenus', () => {
 	test('should return the number of years that have passed since a given age in Venus years', () => {
-		// const previousAge = 21;
-		// const currentAge = 35;
-		// const yrsDelta = currentAge - previousAge;
-		// const venusConversion = 0.62;
-		// const yrsSinceVenus = new YearsSinceVenus(yrsDelta);
-		// const expectedVenusYears = yrsSinceVenus.getDeltaAge() * venusConversion;
+		const previousAge = 21;
+		const currentAge = 35;
+		const yrsDelta = currentAge - previousAge;
+		const venusConversion = 0.62;
+		const yrsSinceVenus = new YearsSinceVenus(yrsDelta);
+		const expectedVenusYears = yrsSinceVenus.getDeltaAge() * venusConversion;
 		expect(yrsSinceVenus.getDeltaAgeVenus()).toBe(expectedVenusYears);
 	});
 });
