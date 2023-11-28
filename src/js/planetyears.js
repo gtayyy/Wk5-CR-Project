@@ -60,7 +60,7 @@ export class YearsSinceMerc {
   }
   getDeltaAgeMerc() {
     const mercConversion = 0.24;
-    return this.yrsSinceEarth * mercConversion;
+    return this.yrsSinceEarth / mercConversion;
   }
 }; 
 
@@ -73,7 +73,20 @@ export class YearsSinceVenus {
 	}
 	getDeltaAgeVenus() {
 		const venusConversion = 0.62;
-		return this.yrsSinceEarth * venusConversion;
+		return this.yrsSinceEarth / venusConversion;
 	}
 };
+
+export class YearsSinceMars {
+	constructor(yrsDelta) {
+		this.yrsSinceEarth = yrsDelta;
+	}
+	getDeltaAge() {
+		return this.yrsSinceEarth;
+	}
+	getDeltaAgeMars() {
+		const marsConversion = 1.88;
+		return this.yearsSinceEarth / marsConversion;
+	}
+}
 
