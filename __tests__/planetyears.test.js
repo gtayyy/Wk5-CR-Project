@@ -1,4 +1,4 @@
-import { Mercury, Venus, Mars, Jupiter, YearsSince, YearsSinceMerc, YearsSinceVenus, YearsSinceMars, YearsSinceJupiter } from './../src/js/planetyears.js'
+import { Mercury, Venus, Mars, Jupiter, YearsSince, YearsSinceMerc, YearsSinceVenus, YearsSinceMars, YearsSinceJupiter, YearsUntil } from './../src/js/planetyears.js'
 
 // Tests for earth years converted to other planetary years
 
@@ -91,5 +91,16 @@ describe('YearsSinceJupiter', () => {
 		const yrsSinceJupiter = new YearsSinceJupiter(yrsDelta);
 		const expectedJupiterYears = yrsSinceJupiter.getDeltaAge() / jupiterConversion;
 		expect(yrsSinceJupiter.getDeltaAgeJupiter()).toBeCloseTo(expectedJupiterYears);
+	});
+});
+
+// Tests for determining years until given age (current age to future)
+describe('YearsUntil', () => {
+	test('should return the number of earth years from the users current age until a future given age', () => {
+		const currentAge = ();
+		const futureAge = ();
+		const yrsDelta = futureAge - currentAge;
+		const yrsUntil = new YearsUntil(yrsDelta);
+		expect(yrsUntil.getDeltaAge()).toBe();
 	});
 });
